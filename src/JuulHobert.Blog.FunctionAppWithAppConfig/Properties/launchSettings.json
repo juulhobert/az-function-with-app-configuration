@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "JuulHobert.Blog.FunctionAppWithAppConfig": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7034",
+      "launchBrowser": false
+    }
+  }
+}
