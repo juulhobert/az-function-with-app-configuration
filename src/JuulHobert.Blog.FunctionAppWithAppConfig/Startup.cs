@@ -28,7 +28,8 @@ public class Startup : FunctionsStartup
                 .Connect(new Uri(appConfigEndpoint), credentials)
                 .Select($"{ServiceOptions.SectionName}:*")
                 .ConfigureKeyVault(kv => kv.SetCredential(credentials))
-                .UseFeatureFlags());
+                .UseFeatureFlags()
+                .ConfigureRefresh(x => x.Register("JuulHobertBlog:Name", refreshAll: true)));
     }
 
     public override void Configure(IFunctionsHostBuilder builder)

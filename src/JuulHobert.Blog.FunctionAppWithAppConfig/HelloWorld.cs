@@ -16,7 +16,7 @@ public class HelloWorld
     private readonly IFeatureManager _featureManager;
 
     public HelloWorld(
-        IOptions<ServiceOptions> options,
+        IOptionsSnapshot<ServiceOptions> options,
         IFeatureManager featureManager)
     {
         _options = options;
