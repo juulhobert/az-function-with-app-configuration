@@ -1,7 +1,9 @@
 ﻿using System.Threading.Tasks;
+using Azure.Messaging.EventGrid;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Configuration.AzureAppConfiguration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Azure.WebJobs.Extensions.EventGrid;
 
 namespace JuulHobert.Blog.FunctionAppWithAppConfig;
 
@@ -17,7 +19,7 @@ public class RefreshAppConfiguration
 
     [FunctionName("RefreshAppConfiguration")]
     public async Task RunAsync(
-        [TimerTrigger("0 * * * * *")] TimerInfo timer,
+        [EventGridTrigger] EventGridEvent eventGridEvent,
         ILogger logger)
     {
         foreach (var refresher in _refresherProvider.Refreshers)
