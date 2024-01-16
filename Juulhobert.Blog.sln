@@ -3,6 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JuulHobert.Blog.FunctionAppWithAppConfig", "src\JuulHobert.Blog.FunctionAppWithAppConfig\JuulHobert.Blog.FunctionAppWithAppConfig.csproj", "{E478D60A-97A5-437B-965F-75F622A5C148}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectFiles", "ProjectFiles", "{C39B6D40-A79B-430D-B4D1-F3604FFDAA31}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		docker-compose.yml = docker-compose.yml
+		LICENSE = LICENSE
+		main.bicep = main.bicep
+		deploy.ps1 = deploy.ps1
+		main.bicepparam = main.bicepparam
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
